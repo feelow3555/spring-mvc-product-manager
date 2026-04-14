@@ -133,4 +133,16 @@ public class ProductService {
     public void deleteProduct(Long id) {
         productRepository.delete(id);
     }
+
+
+    // readOnly = true 클래스 레벨에서 상속받으니까 별도 어노테이션 필요없음
+    // 상품명 키워드 검색
+    public List<Product> searchByName(String keyword) {
+        return productRepository.findByNameContaining(keyword);
+    }
+
+    // 카테고리 필터
+    public List<Product> searchByCategory(Long categoryId) {
+        return productRepository.findByCategoryId(categoryId);
+    }
 }
