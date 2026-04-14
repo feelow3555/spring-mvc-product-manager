@@ -33,6 +33,7 @@
         .empty-msg { text-align: center; padding: 40px; color: #999; font-size: 1.1em; }
     </style>
 </head>
+
 <body>
 
     <h1>상품 목록</h1>
@@ -119,6 +120,17 @@
             </tr>
         </tbody>
     </table>
+
+    </table>
+
+    <!-- 실습 수행 정보 푸터 -->
+    <div style="margin-top: 40px; padding: 12px 16px; background: #f0f0f0; border-top: 1px solid #ccc; font-size: 0.9em; color: #555;">
+        <span th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 HH:mm:ss')}"></span>
+        &nbsp;|&nbsp; 학번: 2271483 &nbsp;|&nbsp; 성명: 황필호
+    </div>
+
+</body>
+</html>
 
 </body>
 </html>
